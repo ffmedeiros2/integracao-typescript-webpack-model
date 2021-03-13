@@ -1,11 +1,13 @@
 import Vendavel from './vendavel';
 
 export default class Livro implements Vendavel {
-    constructor(public nome: string,
+    constructor(
+        public nome: string,
         public readonly preco: number,
-        public readonly desconto: number) { }
-    
+        public readonly desconto: number
+    ) {}
+
     precoComDesconto() {
-        return this.preco * (1-this.desconto);
+        return this.preco * (1 - this.desconto);
     }
 }
